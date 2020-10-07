@@ -1,7 +1,6 @@
-# custom-license-plates
-
-Created with CodeSandbox
-
-//
+The cloud background was taken by Pero Kalimero:
 https://unsplash.com/@pericakalimerica
-is source of the cloud picture
+ 
+
+The license plate CSS is derived from Alex Litel:
+https://codepen.io/alexlitel/pen/zGeqQW
