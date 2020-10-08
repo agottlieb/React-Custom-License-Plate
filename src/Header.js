@@ -18,6 +18,8 @@ const Header = (props) => {
       id= "submittedName"
       className="search" 
       value={inputName.submittedName}
+      //when there's a keystroke = triggers an event, access the updated name 
+      //call a function in order to access the property value, target is input field, value returns data at cursor position
       onChange = {event=>setInputName ({submittedName:event.target.value})}
       />
       <input type="submit" 
