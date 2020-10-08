@@ -18,7 +18,7 @@ const Header = (props) => {
       id= "submittedName"
       className="search" 
       value={inputName.submittedName}
-      onChange = {setInputName}
+      onChange = {event=>setInputName ({submittedName:event.target.value})}
       />
       <input type="submit" 
       value="Create License Plate" 
