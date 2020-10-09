@@ -4,8 +4,9 @@ const Header = (props) => {
     const [inputName, setInputName] = useState ( '' )
  
     const submitHandler = event => {
-    event.preventDefault();
-    // ...
+      event.preventDefault();
+      props.onAddPlate({setInputName})
+    }
   };
 
   return (
@@ -18,7 +19,7 @@ const Header = (props) => {
       id= "submittedName"
       className="search" 
       value={inputName}
-      //event target is input field, value returns data at cursor position
+      //target is input field, value returns data at cursor position
       onChange = {event=>setInputName (event.target.value)
       }
       />
