@@ -1,14 +1,12 @@
 import React, {useState} from "react";
 
-const Header = (props) => {
-    const [inputName, setInputName] = useState ( '' )
+const Header = props => {
+    const [inputName, setInputName] = useState('');
  
     const submitHandler = event => {
       event.preventDefault();
-      props.onAddPlate({setInputName})
+      props.onAddPlate({inputName})
     }
-  };
-
   return (
   <header className="header">
     <h1>Custom License Plate Printer</h1>
@@ -20,15 +18,16 @@ const Header = (props) => {
       className="search" 
       value={inputName}
       //target is input field, value returns data at cursor position
-      onChange = {event=>setInputName (event.target.value)
-      }
+      onChange = {event=> {
+        setInputName (event.target.value)
+      }}
       />
       <input type="submit" 
       value="Create License Plate" 
-      onClick={submitHandler}/>
+      onSubmit={submitHandler}/>
     </aside>
   </header>
     );
-};
+}
 export default Header;
 
