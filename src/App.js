@@ -10,11 +10,16 @@ const App = () => {
     ]);
   }
   
-  
+  const removeNameHandler = plateId => {
+    setUserAddedPlates (prevPlates => 
+      prevPlates.filter(plate => plate.id !==plateId));
+    };
+
+
   return (
    <div className="App">
       <Header onAddPlate ={addPlateHandler}/>
-      <PlatesList plates ={userAddedPlates} />
+      <PlatesList plates ={userAddedPlates} removeName= {removeNameHandler}/>
    </div>
 );
 }

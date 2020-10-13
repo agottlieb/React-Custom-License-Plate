@@ -1,10 +1,21 @@
 import React from "react";
 import Plate from "./Plate.js";
 
-var PlatesList = () => (
-  <ul className="plates-list">
-    <Plate />
-  </ul>
-);
+const PlatesList = props => {
+  const renderPlate = (name, index) => (
+    <Plate 
+      className="plates-list"
+      name={name}
+      key={name}
+      removeName={props.removeName}
+      index={index}
+    />
+  
+  );
+    const PlateElements = props.names.map(renderPlate);
+    return <main> {PlateElements} </main>
+
+};
 
 export default PlatesList;
+
