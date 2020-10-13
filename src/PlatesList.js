@@ -10,9 +10,8 @@ const PlatesList = props => {
       removeName={props.removeName}
       index={index}
     />
-  
   );
-    const PlateElements = props.names.map(renderPlate);
+    const PlateElements = props.plates.map(renderPlate);
     return <main> {PlateElements} </main>
 
 };

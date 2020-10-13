@@ -3,9 +3,10 @@ import React, {useState} from "react";
 const Header = props => {
     const [inputName, setInputName] = useState('');
  
-    const submitHandler = event => {
+    const submitHandler = (event) => {
       event.preventDefault();
       props.onAddPlate({inputName})
+      setInputName({name: " "})
     }
   return (
   <header className="header">
@@ -17,7 +18,7 @@ const Header = props => {
       id= "submittedName"
       className="search" 
       value={inputName}
-      //target is input field, value returns data at cursor position
+      //event handler for typing name in field
       onChange = {event=> {
         setInputName (event.target.value)
       }}
