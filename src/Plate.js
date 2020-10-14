@@ -1,7 +1,7 @@
 import React from "react";
 
 const Plate = props => {
-  const deleteByIndex = () => props.removeNameHandler(props.index);
+  const deleteByIndex = () => props.removeName(props.index);
     return (
   <li className="plate">
     <p className="state"> Springfield </p>
