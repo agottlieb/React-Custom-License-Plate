@@ -11,23 +11,20 @@ const Header = props => {
   return (
   <header className="header">
     <form onSubmit={submitHandler}>
-      <h1>Custom License Plate Printer</h1>
-        <aside>
-          <input 
-            type="text" 
-            placeholder="My name is..." 
-            id= "submittedName"
-            className="search" 
-            value={inputName}
-            //event handler for typing name in field
-            onChange = {event=> {
-              setInputName (event.target.value)
-      }}
-      />
-      <input type="submit" 
-      value="Create License Plate" />
-    </aside>
-    </form>
+        <input 
+          type="text" 
+          placeholder="My name is..." 
+          id="submittedName"
+          className="search" 
+          value={inputName}
+          //event handler for typing name in field
+          onChange = {event=> {
+            setInputName (event.target.value)
+          }}
+        />
+        <input type="submit" 
+          value="Create License Plate" />
+      </form>
   </header>
     );
 }
