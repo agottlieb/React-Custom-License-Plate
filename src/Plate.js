@@ -6,7 +6,7 @@ const Plate = props => {
   <li className="plate">
     <p className="state"> Springfield </p>
     <p className="name"> {props.name} </p>
-    <span onClick={deleteByIndex} className="plate__delete">X</span>
+    <span onClick= {deleteByIndex} className="plate__delete">X</span>
   </li>
     );
 };

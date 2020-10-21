@@ -3,7 +3,7 @@ import PlatesList from "./PlatesList.js";
 import Header from "./Header.js";
 
 const App = () => {
-  const [userAddedPlates, setUserAddedPlates] = useState(["Bort", "Waylons"]);
+  const [userAddedPlates, setUserAddedPlates] = useState(["Bort", "Waylon"]);
 
   const addPlate = (plate) => {
     const newPlates = [plate, ...userAddedPlates];
@@ -11,9 +11,10 @@ const App = () => {
   };
 
   
-  const removeNameHandler = plateId => {
-      setUserAddedPlates (prevPlates => 
-       prevPlates.filter(plate => plate.id !==plateId));
+  const removeNameHandler = (clickedIndex) => {
+      const filterCallback = (_, index) => index !==clickedIndex;
+      const newPlates = setUserAddedPlates(filterCallback);
+      setUserAddedPlates(newPlates);
      };
 
 
