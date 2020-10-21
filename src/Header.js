@@ -5,8 +5,8 @@ const Header = props => {
  
     const submitHandler = (event) => {
       event.preventDefault();
-      props.onAddPlate({inputName})
-      setInputName({name: " "})
+      props.onAddPlate(inputName)
+      setInputName("")
     }
   return (
   <header className="header">

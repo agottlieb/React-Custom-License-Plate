@@ -3,11 +3,11 @@ import PlatesList from "./PlatesList.js";
 import Header from "./Header.js";
 
 const App = () => {
-  const [userAddedPlates, setUserAddedPlates] = useState(["Bort", "Waylon"]);
+  const [userAddedPlates, setUserAddedPlates] = useState(["Bort", "Waylons"]);
 
   const addPlate = (plate) => {
     const newPlates = [plate, ...userAddedPlates];
-    setUserAddedPlates({plates: newPlates})
+    setUserAddedPlates(newPlates)
   };
 
   
