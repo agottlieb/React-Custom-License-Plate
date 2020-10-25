@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import PlatesList from "./PlatesList.js";
 import Header from "./Header.js";
 
@@ -13,11 +13,14 @@ const App = () => {
     // })
   };
 
-  const removeNameHandler = (clickedIndex) => {
-      const filterCallback = (_, index) => index !==clickedIndex;
-      const newPlates = setUserAddedPlates(filterCallback);
-      setUserAddedPlates(newPlates);
-     };
+  //value is never called but needs to be defined in order to get to index (a second variable)
+     const removeNameHandler = (clickedIndex) => {
+      const filteredValues = userAddedPlates.filter((value, index) => {
+        return index !== clickedIndex
+      })
+      
+      setUserAddedPlates(filteredValues);
+    };   
 
 //Saved items in local storage to show up when app renders
  
