@@ -2,13 +2,20 @@ import React, {useState, useEffect} from "react";
 import PlatesList from "./PlatesList.js";
 import Header from "./Header.js";
 
+function getDefaultState() {
+  const savedNames = window.localStorage.getItem('savedNames')
+  if (savedNames) {
+    return JSON.parse(savedNames)
+  }
+  return ["Bort", "Waylon"]
+}
+
 const App = () => {
-  //savedNames is function so it is only rendered when useState is rendered the first time
-  const savedNames = () => window.localStorage.getItem(JSON.parse('savedNames') )|| ""
+const savedNames = getDefaultState()
 
-  const [userAddedPlates, setUserAddedPlates] = useState(["Bort", "Waylon"], savedNames)
+const [userAddedPlates, setUserAddedPlates] = useState(savedNames)
 
-  //Saved items in local storage to show up when app renders 
+  //Saved items in local storage (componentDidUpdate) 
   //second value is called so it only runs when userAddedPlates is updated
   useEffect( () => {
     const savedNames =JSON.stringify(userAddedPlates)
@@ -28,11 +35,6 @@ const App = () => {
       setUserAddedPlates(filteredValues);
     };   
 
-
-//Handler to saving items to local storage
-//     const saveLocal = useEffect( () => {window.localStorage.setItem('plate', plate)})
-  
-// };
 
   return (
    <div className="App">
