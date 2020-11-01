@@ -8,6 +8,7 @@ const Header = props => {
       props.onAddPlate(inputName)
       setInputName("")
     }
+
   return (
   <header className="header">
     <form onSubmit={submitHandler}>
@@ -16,7 +17,7 @@ const Header = props => {
           placeholder="My name is..." 
           id="submittedName"
           className="search" 
-          value={inputName}
+          value= {inputName}
           //event handler for typing name in field
           onChange = {event=> {
             setInputName (event.target.value)

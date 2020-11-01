@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import PlatesList from "./PlatesList.js";
 import Header from "./Header.js";
 
+//component did mount--when app loads, items saved to local storage load with it
 function getDefaultState() {
   const savedNames = window.localStorage.getItem('savedNames')
   if (savedNames) {
