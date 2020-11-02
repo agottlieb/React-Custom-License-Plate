@@ -9,6 +9,15 @@ const Header = props => {
       setInputName("")
     }
 
+    const emptyStringHandler = () => {
+      if (inputName === '') {
+      alert ('Please enter a name') 
+      return;
+      }
+      else if (inputName == true) 
+    {inputName}
+    } 
+
   return (
   <header className="header">
     <form onSubmit={submitHandler}>
@@ -17,7 +26,7 @@ const Header = props => {
           placeholder="My name is..." 
           id="submittedName"
           className="search" 
-          value= {inputName}
+          value= {emptyStringHandler}
           //event handler for typing name in field
           onChange = {event=> {
             setInputName (event.target.value)
@@ -30,4 +39,5 @@ const Header = props => {
     );
 }
 export default Header;
+
 
