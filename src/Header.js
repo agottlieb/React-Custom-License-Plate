@@ -30,8 +30,9 @@ const Header = props => {
           }}
         />
         <input type="submit" 
-          value="Create License Plate" />
-        {error}
+          value="Create License Plate" 
+          className="button"/>
+        <div className ="error"> {error} </div>   
       </form>    
   </header>
     );
