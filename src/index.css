@@ -7,16 +7,12 @@
 .App {
   text-align: center;
   background-image: url("Images/clouds.jpg");
-  /* break */
-  /* position: fixed; 
-  top: 0; 
-  left: 0; 
   min-width: 100%;
-  min-height: 100%; */
-  height: 100%; 
-  background-position: center;
-  background-repeat: no-repeat;
+  min-height: 200%; 
   background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: fixed; 
 }
 
 
